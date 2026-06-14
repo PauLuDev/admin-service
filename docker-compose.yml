@@ -1,0 +1,9 @@
+services:
+  iam-app:
+    build: .
+    container_name: admin-service
+    ports:
+      - "9090:9090"
+    env_file:
+      - .env
+    restart: unless-stopped
